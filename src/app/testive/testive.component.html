@@ -1,0 +1,10 @@
+<p>testive works!</p>
+<div>
+    <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+        <input type="text" name="userName" placeholder="userName">
+        <br/>
+        <br/>
+        <input type="submit" value="Click me">
+    </form>
+</div>
+<h3> Textbox result is : {{userName}}</h3>

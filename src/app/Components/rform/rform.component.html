@@ -1,0 +1,8 @@
+<p>rform works!</p>
+<button  class="button" (click)="openHom()">Home </button>
+<label for="name"> Name: </label>
+<input id="name" type="text" [formControl]="name">
+<!-- display the value as you enter-->
+<p> Your Name is :{{ name.value}}</p>
+<!-- button to update name valueby calling the method on the action -->
+<button type="button" class="button" (click)="updateName()">Update Name</button>

@@ -1,0 +1,26 @@
+<p>reactive works!</p>
+
+<div class="container">
+    <h3 class="m-4">reactive Forms</h3>
+    
+    <form [formGroup]="reactiveForm" (ngSubmit)="onTest()">
+        <div class="mb-3">
+            <label for="exampleName1" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="exampleName1" formControlName="firstName" required>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputlastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="exampleInputlastName" formControlName="lastName">
+          </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div> 

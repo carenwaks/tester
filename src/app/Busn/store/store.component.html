@@ -1,0 +1,28 @@
+
+<div class="main">
+    <h3> My To-do Store</h3> 
+    <label for>What would you like to do?</label>
+    <br>
+    <input 
+    #newItem
+    placeholder="Add item here"
+    (keyup.enter)="addItem(newItem.value); newItem.value = '' "
+    class="lg-text-input"
+    id="addItemInput">
+    <button class="btn-primary" (click)="addItem(newItem.value)" >
+        Add Task
+    </button>
+    <hr>
+    <div class="row"  *ngIf="showmsg">
+        <div class="col-xs-12">
+          <p class="alert alert-success">
+              <strong>Task added successfully!</strong> 
+          </p>
+        </div>
+      </div>
+    <ul>
+        <li  *ngFor="let item of allItems">
+            {{item.task}}
+        </li>
+    </ul>
+</div>
